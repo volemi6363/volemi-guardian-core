@@ -1,0 +1,43 @@
+
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VOLEMİ Guardian Kontrol Paneli</title>
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+<body>
+  <header class="top">
+    <h1>VOLEMİ Guardian</h1>
+    <div class="right">
+      <span id="guardianState" class="badge">PASİF</span>
+      <button id="guardianToggle" data-on="false">Guardian: Kapalı</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="grid" id="status-cards">
+      <div class="card" id="card-meta"><h3>Meta</h3><div class="dot"></div><p class="note"></p><button class="opt" data-p="meta">İyileştir</button></div>
+      <div class="card" id="card-google"><h3>Google</h3><div class="dot"></div><p class="note"></p><button class="opt" data-p="google">İyileştir</button></div>
+      <div class="card" id="card-tiktok"><h3>TikTok</h3><div class="dot"></div><p class="note"></p><button class="opt" data-p="tiktok">İyileştir</button></div>
+      <div class="card" id="card-x"><h3>Twitter (X)</h3><div class="dot"></div><p class="note"></p><button class="opt" data-p="x">İyileştir</button></div>
+    </section>
+
+    <section class="panel">
+      <h2>Eşikler</h2>
+      <label>Yeşil için tık: <input id="thrGreen" type="number" value="10" /></label>
+      <label>Sarı için tık: <input id="thrYellow" type="number" value="1" /></label>
+      <button id="saveThr">Kaydet</button>
+    </section>
+
+    <section class="panel">
+      <h2>Son İşlemler</h2>
+      <ul id="actions"></ul>
+    </section>
+  </main>
+
+  <footer>v1 • VOLEMİ Guardian Core</footer>
+  <script src="dashboard.js"></script>
+</body>
+</html>
